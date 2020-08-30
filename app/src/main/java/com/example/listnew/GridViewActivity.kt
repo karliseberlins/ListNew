@@ -1,7 +1,9 @@
 package com.example.listnew
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_grid_view.*
@@ -31,7 +33,7 @@ class GridViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grid_view)
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, items)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_2, items)
         this.mainGridItems.adapter = adapter
 
         mainGridItems.setOnItemClickListener { parent, view, position, id ->
@@ -40,5 +42,12 @@ class GridViewActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
         }
+        //izsauc GridView piemēru
+        fun openGridView(view: View) {
+            val intentGridView = Intent(this, GridViewActivity::class.java)
+
+            startActivity(intentGridView)
+        }
+
     }
 }

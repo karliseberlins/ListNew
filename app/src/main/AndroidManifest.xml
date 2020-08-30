@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".GridViewActivity"></activity>
-        <activity android:name=".ListViewActivity" />
+        <activity android:name=".ListViewActivity"></activity>
     </application>
 
 </manifest>

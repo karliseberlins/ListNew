@@ -15,11 +15,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //izsauc ListView piemēru
-        fun openListView(view:View) {
-            val intentListView = Intent(this, ListViewActivity::class.java)
-
-            startActivity(intentListView)
-        }
     }
 }
